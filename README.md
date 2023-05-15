@@ -2,6 +2,14 @@
 
 **Kisakay/Kisakay** is a ✨ _special_ ✨ individual who loves to write about their life in the `README.md` file on their GitHub profile.
 
+```JSON
+{
+    "name":"Kisa Keyara",
+    "age": 16,
+    "birthday":"31st July",
+    "location":"France, Brittany"
+}
+```
 Some interesting facts about this person:
 
 -   🔭 They are currently working on iHorizon & PalaDrill.
