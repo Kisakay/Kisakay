@@ -1,6 +1,6 @@
 # Kisa Keyara
 
-**Kisakay/Kisakay** is a ✨ _special_ ✨ individual who loves to write about their life in the `README.md` file on their GitHub profile.
+**Kisakay/Kisakay** is a ✨ _special_ ✨ person who enjoys writing about his life in the `README.md` file on his GitHub profile.
 
 ```JSON
 {
