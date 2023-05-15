@@ -12,8 +12,8 @@
 ```
 Some interesting facts about this person:
 
--   🔭 They are currently working on iHorizon & PalaDrill.
--   🌱 They are currently learning Rust, C++, and C.
+-   🔭 She are currently working on iHorizon & PalaDrill.
+-   🌱 She are currently learning Rust, C++, and C.
 -   💬 You can ask them about anything!
 -   📫 You can reach them at `kisakeyara@gmail.com`.
 -   😄 Pronouns: She/her.
