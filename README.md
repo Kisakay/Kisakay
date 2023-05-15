@@ -8,8 +8,7 @@
     "age": 16,
     "birthday": "31st July",
     "location": "France, Brittany"
-}
-```
+}```
 Some interesting facts about this person:
 
 -   🔭 They are currently working on iHorizon & PalaDrill.
