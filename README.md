@@ -4,10 +4,10 @@
 
 ```JSON
 {
-    "name":"Kisa Keyara",
+    "name": "Kisa Keyara",
     "age": 16,
-    "birthday":"31st July",
-    "location":"France, Brittany"
+    "birthday": "31st July",
+    "location": "France, Brittany"
 }
 ```
 Some interesting facts about this person:
