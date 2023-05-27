@@ -5,6 +5,7 @@
 ```JSON
 {
     "name": "Kisa Keyara",
+    "gender": "female"
     "age": 16,
     "birthday": "31st July",
     "location": "French, Brittany"
