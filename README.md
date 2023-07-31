@@ -6,7 +6,7 @@
 {
     "name": "Anaïs Saraiva",
     "gender": "female"
-    "age": 16,
+    "age": 17,
     "birthday": "31st July",
     "location": "French, Brittany"
 }
