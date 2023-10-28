@@ -14,7 +14,7 @@
 Some interesting facts about this person:
 
 -   🔭 She is currently working on: **iHorizon** & **Clarity**.
--   🌱 She is currently learning: `Rust`, `C++`, and `C`.
+-   🌱 She is currently learning: `GoLang`, `Kotlin`, and `Nim`, `Rust`.
 -   💬 You can ask her about: _anything_ !
 -   📫 You can reach her at: `kisakeyara@gmail.com`.
 -   😄 Pronouns: she/her.
