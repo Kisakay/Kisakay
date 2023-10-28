@@ -16,6 +16,6 @@ Some interesting facts about this person:
 -   🔭 She is currently working on: **iHorizon** & **Clarity**.
 -   🌱 She is currently learning: `GoLang`, `Kotlin`, and `Nim`, `Rust`.
 -   💬 You can ask her about: _anything_ !
--   📫 You can reach her at: `kisakeyara@gmail.com`.
+-   📫 You can reach her at: `2h0` on Discord.
 -   😄 Pronouns: she/her.
 -   ⚡ Fun fact about Anaïs: She started learning computer science at the age of 7 on a Compaq R4000 Presario!
