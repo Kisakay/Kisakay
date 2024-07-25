@@ -2,6 +2,9 @@
 
 **Kisakay/Kisakay** is a ✨ _special_ ✨ person who enjoys writing about her life in the `README.md` file on her GitHub profile.
 
+[![Discord Presence](https://lanyard.cnrad.dev/api/1181123770845503600)](https://discord.com/users/1181123770845503600)
+
+
 ```JSON
 {
     "name": "Anaïs Saraiva",
