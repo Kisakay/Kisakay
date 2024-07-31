@@ -16,7 +16,7 @@
 {
     "name": "Anaïs Saraiva",
     "gender": "female",
-    "age": 17,
+    "age": 18,
     "birthday": "31st July",
     "location": "French, Brittany",
     "hardware": {
