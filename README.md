@@ -44,8 +44,8 @@
             "psu": "Corsair RM 1000X",
             "case": "too old case idk them name",
             "storages": [
-                "HDD01: Seagate Barracuda Pro 2.5'' 1to",
-                "SSD01: 480GB Kingtson A400 Sata"
+                "HDD01": "Seagate Barracuda Pro 2.5'' 1to",
+                "SSD01": "480GB Kingtson A400 Sata"
             ]
         },
         "laptop01": {
@@ -54,7 +54,7 @@
             "cpu": "Intel i5 7300U",
             "ram": "12 Go (1*4, 1*8)",
             "storages": [
-                "SSD01: "Crucial P3 Plus 500Go M.2"
+                "SSD01": "Crucial P3 Plus 500Go M.2"
             ]
         },
         "laptop02": {
