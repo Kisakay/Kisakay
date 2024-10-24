@@ -54,7 +54,16 @@
             "cpu": "Intel i5 7300U",
             "ram": "12 Go (1*4, 1*8)",
             "storages": [
-                "SSD01: Crucial P3 Plus 500Go M.2"
+                "SSD01: "Crucial P3 Plus 500Go M.2"
+            ]
+        },
+        "laptop02": {
+            "os": "ArchLinux only (0vm, 0dualboot, Asahi Linux)",
+            "model": "macbook air m3 2024",
+            "cpu": "Apple m3 chip",
+            "ram": "24 GO",
+            "storages": [
+                "SSD01: "512 GB"
             ]
         },
         "phone01": {
