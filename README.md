@@ -63,7 +63,7 @@
             "cpu": "Apple m3 chip",
             "ram": "24 GO",
             "storages": [
-                "SSD01: "512 GB"
+                "SSD01": "512 GB"
             ]
         },
         "phone01": {
