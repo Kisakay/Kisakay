@@ -16,27 +16,18 @@
 {
     "name": "Anaïs Saraiva",
     "gender": "female",
-    "age": 18,
+    "age": 19,
     "birthday": "31st July",
     "location": "France, Brittany",
     "hardware": {
         "laptop01": {
-            "os": "macOS Sequoia with Fedora in VM",
-            "model": "Apple MacBook Air M3 2024",
-            "cpu": "Apple Silicons M3",
-            "ram": "24 GO",
+            "os": "Debian 12 XFCE",
+            "model": "HP ProBook 860 G1",
+            "cpu": "i3 4000M",
+            "ram": "12 GO",
             "storages": {
-                "SSD01": "512 GB"
+                "SSD01": "128 GB"
             }
-        },
-        "laptop02": {
-            "os": "ArchLinux only (0vm, 0dualboot)",
-            "model": "HP EliteBook 840 G4",
-            "cpu": "Intel i5 7300U",
-            "ram": "12 Go (1*4, 1*8)",
-            "storages": [
-                "SSD01: Crucial P3 Plus 500Go M.2"
-            ]
         },
         "phone01": {
             "model": "Oppo Reno 13 Pro"
