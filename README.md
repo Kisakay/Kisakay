@@ -21,12 +21,12 @@
     "location": "France, Brittany",
     "hardware": {
         "laptop01": {
-            "os": "Debian 12 XFCE",
-            "model": "HP ProBook 860 G1",
-            "cpu": "i3 4000M",
-            "ram": "12 GO",
+            "os": "NixOS 25",
+            "model": "Framework 13",
+            "cpu": "Ryzen 5 7640U",
+            "ram": "32 GO",
             "storages": {
-                "SSD01": "128 GB"
+                "SSD01": "2 TB"
             }
         },
         "phone01": {
