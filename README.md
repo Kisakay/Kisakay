@@ -97,6 +97,9 @@ languages:
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kisakay&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF69B4&text_color=FFFFFF)
 
+## My current streak
+<img src="https://streak-stats.demolab.com?user=Kisakay&theme=dark&hide_border=true" alt="Kisakay's GitHub Stats" />
+
 </div>
 
 ---
