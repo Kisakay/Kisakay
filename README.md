@@ -102,7 +102,7 @@ languages:
 ## 👑 My current streak
 
 <div align="center">
-<img src="https://streak-stats.demolab.com?user=Kisakay&theme=dark&hide_border=true" alt="Kisakay's GitHub Stats" />
+<img src="https://streak-stats.demolab.com/?user=Kisakay&hide_border=true&theme=dark" alt="Kisakay's GitHub Stats" />
 
 </div>
 
