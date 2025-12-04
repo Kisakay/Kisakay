@@ -95,7 +95,7 @@ languages:
 
 <div align="center">
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kisakay&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF69B4&text_color=FFFFFF)
+![Top Languages](https://github-readme-stats-kisakays-projects.vercel.app/api/top-langs/?username=Kisakay&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF69B4&text_color=FFFFFF)
 
 </div>
 
