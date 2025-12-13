@@ -54,7 +54,7 @@ languages:
 | 💿 **OS** | NixOS 25.05 |
 | ⚡ **CPU** | Ryzen 5 7640U |
 | 🧠 **RAM** | 32 GB |
-| 💾 **Storage** | 2TB SSD |
+| 💾 **Storage** | 4TB SSD |
 
 </div>
 
