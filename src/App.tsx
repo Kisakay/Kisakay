@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import aboutContent from './content/about.txt?raw'
 import techContent from './content/tech.txt?raw'
@@ -19,6 +19,7 @@ interface SocialLink {
 
 function App() {
   const [activeSection, setActiveSection] = useState<SectionKey>('about')
+  const contentRef = useRef<HTMLPreElement>(null)
 
   const sections: Record<SectionKey, Section> = {
     about: {
@@ -33,6 +34,31 @@ function App() {
       title: 'contact',
       content: contactContent
     }
+  }
+
+  // Réinitialiser le contenu quand on change de section ou qu'on perd le focus
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.textContent = sections[activeSection].content
+    }
+  }, [activeSection])
+  
+  // Réinitialiser le contenu quand on change de section ou qu'on perd le focus
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.textContent = sections[activeSection].content
+    }
+  }, [activeSection, sections])
+
+  const handleBlur = () => {
+    if (contentRef.current) {
+      contentRef.current.textContent = sections[activeSection].content
+    }
+  }
+
+  const handleInput = () => {
+    // Permet l'édition visuelle mais ne sauvegarde rien
+    // Le contenu sera réinitialisé au blur ou changement de section
   }
 
   const socialLinks: SocialLink[] = [
@@ -173,7 +199,16 @@ function App() {
       </nav>
 
       <main className="editor">
-        <pre className="content">{sections[activeSection].content}</pre>
+        <pre
+          ref={contentRef}
+          className="content"
+          contentEditable
+          suppressContentEditableWarning
+          onBlur={handleBlur}
+          onInput={handleInput}
+        >
+          {sections[activeSection].content}
+        </pre>
       </main>
     </div>
   )

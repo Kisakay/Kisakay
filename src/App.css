@@ -77,6 +77,12 @@
   overflow: auto;
   line-height: 1.6;
   tab-size: 2;
+  outline: none;
+  cursor: text;
+}
+
+.content:focus {
+  outline: none;
 }
 
 .content::-webkit-scrollbar {
