@@ -1,0 +1,17 @@
+> Started coding at 7 on a Compaq R4000 Presario — been hooked ever since!
+
+name: Anaïs Saraiva
+age: 19
+birthday: July 31st
+location: Brittany, France
+pronouns: she/her
+
+currently:
+  working_on: iHorizon 🚀
+  learning: [GoLang, Kotlin]
+  open_to: Anything you want to discuss!
+
+languages:
+  - English 🇬🇧
+  - Français 🇫🇷
+  - Россия 🇷🇺

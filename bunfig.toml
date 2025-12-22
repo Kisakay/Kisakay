@@ -1,0 +1,4 @@
+# Configuration Bun pour le projet
+[install]
+# Utiliser le cache global de Bun
+cache = true

@@ -1,0 +1,17 @@
+primary_setup:
+  device: Framework 13 Laptop
+  os: NixOS 25.05
+  cpu: Ryzen 5 7640U
+  ram: 32 GB
+  storage: 4TB SSD
+
+mobile_collection:
+  - Oppo Reno 13 Pro (Primary)
+  - Oppo Find X3 Neo (Secondary)
+  - iPhone X 64GB (Backup)
+  - iPhone 8 64GB (Archive)
+
+preferences:
+  desktop_os: [ArchLinux, Debian, NixOS]
+  mobile_os: Android
+  colors: [#FF69B4 Pink, #9B59B6 Purple, #3498DB Blue]
