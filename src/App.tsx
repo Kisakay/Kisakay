@@ -63,6 +63,21 @@ function App() {
     }
   }, [isCreatingTab])
 
+  // Gestion du Ctrl+S pour sauvegarder le contenu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault()
+        saveCurrentTab()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [activeSection, ephemeralTabs, sections])
+
   const getCurrentContent = (): string => {
     const sectionKeys: SectionKey[] = ['about', 'tech', 'contact']
     if (sectionKeys.includes(activeSection as SectionKey)) {
@@ -70,6 +85,35 @@ function App() {
     }
     const ephemeralTab = ephemeralTabs.find(tab => tab.id === activeSection)
     return ephemeralTab?.content || ''
+  }
+
+  const getCurrentTabTitle = (): string => {
+    const sectionKeys: SectionKey[] = ['about', 'tech', 'contact']
+    if (sectionKeys.includes(activeSection as SectionKey)) {
+      return sections[activeSection as SectionKey].title
+    }
+    const ephemeralTab = ephemeralTabs.find(tab => tab.id === activeSection)
+    return ephemeralTab?.title || 'untitled'
+  }
+
+  const saveCurrentTab = () => {
+    const content = contentRef.current?.textContent || getCurrentContent()
+    const title = getCurrentTabTitle()
+    
+    // Créer un blob avec le contenu
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    
+    // Créer un lien de téléchargement
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `${title}.txt`
+    document.body.appendChild(link)
+    link.click()
+    
+    // Nettoyer
+    document.body.removeChild(link)
+    URL.revokeObjectURL(url)
   }
 
   const handleBlur = () => {
