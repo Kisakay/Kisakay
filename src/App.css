@@ -15,10 +15,34 @@
   padding: 0;
   margin: 0;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .tabs-left {
   display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  min-width: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #0d1117;
+}
+
+.tabs-left::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs-left::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.tabs-left::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+.tabs-left::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
 }
 
 .tab {
@@ -33,6 +57,8 @@
   transition: all 0.15s;
   text-transform: lowercase;
   position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .tab:hover {
@@ -108,6 +134,8 @@
   text-transform: lowercase;
   outline: none;
   min-width: 150px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .tab-input:focus {
@@ -172,6 +200,7 @@
   align-items: center;
   gap: 0.5rem;
   padding-right: 1rem;
+  flex-shrink: 0;
 }
 
 .social-link {

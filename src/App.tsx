@@ -31,6 +31,7 @@ function App() {
   const [newTabName, setNewTabName] = useState('')
   const contentRef = useRef<HTMLPreElement>(null)
   const newTabInputRef = useRef<HTMLInputElement>(null)
+  const tabsLeftRef = useRef<HTMLDivElement>(null)
 
   const sections: Record<SectionKey, Section> = {
     about: {
@@ -127,6 +128,13 @@ function App() {
     } else if (e.key === 'Escape') {
       setIsCreatingTab(false)
       setNewTabName('')
+    }
+  }
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (tabsLeftRef.current) {
+      e.preventDefault()
+      tabsLeftRef.current.scrollLeft += e.deltaY
     }
   }
 
@@ -240,7 +248,11 @@ function App() {
   return (
     <div className="container">
       <nav className="tabs">
-        <div className="tabs-left">
+        <div 
+          ref={tabsLeftRef}
+          className="tabs-left"
+          onWheel={handleWheel}
+        >
           {Object.keys(sections).map((key) => (
             <button
               key={key}
