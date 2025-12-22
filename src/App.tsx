@@ -5,8 +5,15 @@ import techContent from './content/tech.txt?raw'
 import contactContent from './content/contact.txt?raw'
 
 type SectionKey = 'about' | 'tech' | 'contact'
+type AllSectionKey = SectionKey | string
 
 interface Section {
+  title: string
+  content: string
+}
+
+interface EphemeralTab {
+  id: string
   title: string
   content: string
 }
@@ -18,8 +25,12 @@ interface SocialLink {
 }
 
 function App() {
-  const [activeSection, setActiveSection] = useState<SectionKey>('about')
+  const [activeSection, setActiveSection] = useState<AllSectionKey>('about')
+  const [ephemeralTabs, setEphemeralTabs] = useState<EphemeralTab[]>([])
+  const [isCreatingTab, setIsCreatingTab] = useState(false)
+  const [newTabName, setNewTabName] = useState('')
   const contentRef = useRef<HTMLPreElement>(null)
+  const newTabInputRef = useRef<HTMLInputElement>(null)
 
   const sections: Record<SectionKey, Section> = {
     about: {
@@ -39,26 +50,84 @@ function App() {
   // Réinitialiser le contenu quand on change de section ou qu'on perd le focus
   useEffect(() => {
     if (contentRef.current) {
-      contentRef.current.textContent = sections[activeSection].content
+      const currentContent = getCurrentContent()
+      contentRef.current.textContent = currentContent
     }
-  }, [activeSection])
-  
-  // Réinitialiser le contenu quand on change de section ou qu'on perd le focus
+  }, [activeSection, ephemeralTabs])
+
+  // Focus sur l'input quand on crée un nouvel onglet
   useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.textContent = sections[activeSection].content
+    if (isCreatingTab && newTabInputRef.current) {
+      newTabInputRef.current.focus()
     }
-  }, [activeSection, sections])
+  }, [isCreatingTab])
+
+  const getCurrentContent = (): string => {
+    const sectionKeys: SectionKey[] = ['about', 'tech', 'contact']
+    if (sectionKeys.includes(activeSection as SectionKey)) {
+      return sections[activeSection as SectionKey].content
+    }
+    const ephemeralTab = ephemeralTabs.find(tab => tab.id === activeSection)
+    return ephemeralTab?.content || ''
+  }
 
   const handleBlur = () => {
     if (contentRef.current) {
-      contentRef.current.textContent = sections[activeSection].content
+      const sectionKeys: SectionKey[] = ['about', 'tech', 'contact']
+      // Pour les onglets permanents, réinitialiser le contenu
+      if (sectionKeys.includes(activeSection as SectionKey)) {
+        const currentContent = getCurrentContent()
+        contentRef.current.textContent = currentContent
+      } else {
+        // Pour les onglets éphémères, sauvegarder temporairement le contenu
+        const updatedContent = contentRef.current.textContent || ''
+        setEphemeralTabs(prevTabs =>
+          prevTabs.map(tab =>
+            tab.id === activeSection ? { ...tab, content: updatedContent } : tab
+          )
+        )
+      }
     }
   }
 
   const handleInput = () => {
-    // Permet l'édition visuelle mais ne sauvegarde rien
-    // Le contenu sera réinitialisé au blur ou changement de section
+    // Permet l'édition visuelle
+    // Pour les onglets permanents, le contenu sera réinitialisé au blur
+    // Pour les onglets éphémères, le contenu sera sauvegardé temporairement
+  }
+
+  const createNewTab = () => {
+    if (newTabName.trim()) {
+      const newTab: EphemeralTab = {
+        id: `ephemeral-${Date.now()}`,
+        title: newTabName.trim(),
+        content: ''
+      }
+      setEphemeralTabs([...ephemeralTabs, newTab])
+      setActiveSection(newTab.id)
+      setNewTabName('')
+      setIsCreatingTab(false)
+    }
+  }
+
+  const deleteEphemeralTab = (tabId: string, e: React.MouseEvent) => {
+    e.stopPropagation()
+    const newTabs = ephemeralTabs.filter(tab => tab.id !== tabId)
+    setEphemeralTabs(newTabs)
+    if (activeSection === tabId && newTabs.length > 0) {
+      setActiveSection(newTabs[0].id)
+    } else if (activeSection === tabId) {
+      setActiveSection('about')
+    }
+  }
+
+  const handleNewTabKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      createNewTab()
+    } else if (e.key === 'Escape') {
+      setIsCreatingTab(false)
+      setNewTabName('')
+    }
   }
 
   const socialLinks: SocialLink[] = [
@@ -181,6 +250,48 @@ function App() {
               {sections[key as SectionKey].title}
             </button>
           ))}
+          {ephemeralTabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={`tab ephemeral ${activeSection === tab.id ? 'active' : ''}`}
+              onClick={() => setActiveSection(tab.id)}
+            >
+              {tab.title}
+              <span
+                className="tab-close"
+                onClick={(e) => deleteEphemeralTab(tab.id, e)}
+                title="Delete tab"
+              >
+                ×
+              </span>
+            </button>
+          ))}
+          {isCreatingTab ? (
+            <input
+              ref={newTabInputRef}
+              type="text"
+              className="tab-input"
+              value={newTabName}
+              onChange={(e) => setNewTabName(e.target.value)}
+              onBlur={() => {
+                if (newTabName.trim()) {
+                  createNewTab()
+                } else {
+                  setIsCreatingTab(false)
+                }
+              }}
+              onKeyDown={handleNewTabKeyDown}
+              placeholder="tab name"
+            />
+          ) : (
+            <button
+              className="tab tab-new"
+              onClick={() => setIsCreatingTab(true)}
+              title="Create new tab"
+            >
+              +
+            </button>
+          )}
         </div>
         <div className="social-links">
           {socialLinks.map((social, index) => (
@@ -207,7 +318,7 @@ function App() {
           onBlur={handleBlur}
           onInput={handleInput}
         >
-          {sections[activeSection].content}
+          {getCurrentContent()}
         </pre>
       </main>
     </div>
