@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-html {
-  zoom: 1.8;
-}
+/* html {
+  zoom: 1.4;
+} */
 
 html, body {
   height: 100%;

@@ -7,11 +7,49 @@ location: Brittany, France
 pronouns: she/her
 
 currently:
-  working_on: iHorizon 🚀
-  learning: [GoLang, Kotlin]
-  open_to: Anything you want to discuss!
+  → working_on: iHorizon 🚀
+  → learning: [GoLang, Kotlin]
+  → open_to: Anything you want to discuss!
 
 languages:
-  - English 🇬🇧
-  - Français 🇫🇷
-  - Россия 🇷🇺
+  • English 🇬🇧
+  • Français 🇫🇷
+  • Русский 🇷🇺
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is a non-exhaustive list of projects I worked on:
+
+iHorizon (since September 2020)
+A multi-purpose open-source Discord bot, developed in TypeScript with discord.js
+  ➜ 400,000 members
+  ➜ 2,300 servers
+  ➜ 1,600 members in the Discord support server
+  ➜ www.ihorizon.org
+  ➜ discord.gg/ihorizon
+
+KxsClient
+An .IO client game, developed in TypeScript using Webpack
+  ➜ 19,000 unique players
+  ➜ Since December 2024
+  ➜ 30 mods
+  ➜ 14 average players connected simultaneously on the KxsNetwork
+  ➜ Open-source
+  ➜ kxs.rip
+  ➜ discord.wf/kxsclient
+
+ForestMC (old project)
+A 1.8.9 PvP-kit Minecraft server
+  ➜ 100 online players
+  ➜ Only farm2win
+  ➜ Developing my own Spigot plugins
+  ➜ Based on TacosSpigot
+
+PalaDrill (old project)
+An old 1.12.2 Minecraft hybrid server
+  ➜ Created in August 2023
+  ➜ Using Mohist
+  ➜ Created my own 1.12.2 Forge mods
+  ➜ Created my own Paper plugins
+
+All projects reflect my passion for building engaging, community‑driven experiences — one line of code at a time. 💫
