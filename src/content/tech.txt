@@ -15,3 +15,5 @@ preferences:
   desktop_os: [ArchLinux, Debian, NixOS]
   mobile_os: Android
   colors: [#FF69B4 Pink, #9B59B6 Purple, #3498DB Blue]
+
+tested_distros: [archlinux, nixos, debian, ubuntu, pop!_os, fedora, artix, garuda, mint, zorin, parrotOs, redhat, openSuse, manjaro ] \\ Yeah, old distro hopper.
