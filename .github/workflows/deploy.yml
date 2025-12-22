@@ -25,6 +25,13 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: List dist contents
+        run: |
+          echo "Contents of dist directory:"
+          ls -la dist/ || echo "dist directory not found"
+          echo "Contents of dist/assets (if exists):"
+          ls -la dist/assets/ || echo "assets directory not found in dist"
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
