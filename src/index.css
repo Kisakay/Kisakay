@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  zoom: 1.8;
+}
+
 html, body {
   height: 100%;
   overflow: hidden;
 }
 
 body {
-  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-family: 'Source Code Pro', monospace;
   background-color: #0d1117;
   color: #c9d1d9;
   line-height: 1.6;
