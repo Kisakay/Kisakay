@@ -4,10 +4,23 @@ import aboutContent from './content/about.txt?raw'
 import techContent from './content/tech.txt?raw'
 import contactContent from './content/contact.txt?raw'
 
-function App() {
-  const [activeSection, setActiveSection] = useState('about')
+type SectionKey = 'about' | 'tech' | 'contact'
 
-  const sections = {
+interface Section {
+  title: string
+  content: string
+}
+
+interface SocialLink {
+  name: string
+  url: string
+  icon: React.ReactNode
+}
+
+function App() {
+  const [activeSection, setActiveSection] = useState<SectionKey>('about')
+
+  const sections: Record<SectionKey, Section> = {
     about: {
       title: 'about',
       content: aboutContent
@@ -22,7 +35,7 @@ function App() {
     }
   }
 
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     {
       name: 'Discord',
       url: 'https://discord.com/users/171356978310938624',
@@ -133,13 +146,13 @@ function App() {
     <div className="container">
       <nav className="tabs">
         <div className="tabs-left">
-          {Object.keys(sections).map(key => (
+          {Object.keys(sections).map((key) => (
             <button
               key={key}
               className={`tab ${activeSection === key ? 'active' : ''}`}
-              onClick={() => setActiveSection(key)}
+              onClick={() => setActiveSection(key as SectionKey)}
             >
-              {sections[key].title}
+              {sections[key as SectionKey].title}
             </button>
           ))}
         </div>
