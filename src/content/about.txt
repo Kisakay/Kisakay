@@ -52,4 +52,7 @@ An old 1.12.2 Minecraft hybrid server
   ➜ Created my own 1.12.2 Forge mods
   ➜ Created my own Paper plugins
 
+stegano.db NpmJS librairies
+An database wrapper using steganography. database values are stored into a PNG.
+
 All projects reflect my passion for building engaging, community‑driven experiences — one line of code at a time. 💫
