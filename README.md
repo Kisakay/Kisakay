@@ -51,10 +51,19 @@ languages:
 
 | Component | Specs |
 |-----------|-------|
-| 💿 **OS** | NixOS 25.05 |
+| 💿 **OS** | NixOS 25.11 |
 | ⚡ **CPU** | Ryzen 5 7640U |
 | 🧠 **RAM** | 32 GB |
 | 💾 **Storage** | 4TB SSD |
+
+### 🖥️ **Secondary Setup** — Lenovo ThinkPad T495
+
+| Component | Specs |
+|-----------|-------|
+| 💿 **OS** | NixOS 25.11 |
+| ⚡ **CPU** | Ryzen 7 PRO 3700U |
+| 🧠 **RAM** | 16 GB |
+| 💾 **Storage** | 1TB SSD |
 
 </div>
 
